@@ -1,4 +1,4 @@
-package com.adyen.android.assignment.ui
+package com.adyen.android.assignment.common.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 
