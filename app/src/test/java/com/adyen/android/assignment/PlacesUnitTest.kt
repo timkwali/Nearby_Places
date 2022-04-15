@@ -1,6 +1,6 @@
 package com.adyen.android.assignment
 
-import com.adyen.android.assignment.common.data.api.PlacesService
+import com.adyen.android.assignment.common.data.api.PlacesApi
 import com.adyen.android.assignment.common.data.api.VenueRecommendationsQueryBuilder
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
@@ -13,7 +13,7 @@ class PlacesUnitTest {
         val query = VenueRecommendationsQueryBuilder()
             .setLatitudeLongitude(52.376510, 4.905890)
             .build()
-        val response = PlacesService.instance
+        val response = PlacesApi.instance
             .getVenueRecommendations(query)
             .execute()
 

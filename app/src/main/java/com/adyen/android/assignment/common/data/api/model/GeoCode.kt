@@ -1,10 +1,10 @@
 package com.adyen.android.assignment.common.data.api.model
 
 data class GeoCode(
-    val main: Main
+    val main: Main?
 )
 
 data class Main(
-    val latitude: Double,
-    val longitude: Double,
+    val latitude: Double?,
+    val longitude: Double?,
 )
