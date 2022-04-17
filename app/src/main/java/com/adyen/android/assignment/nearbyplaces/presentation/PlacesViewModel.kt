@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.adyen.android.assignment.common.data.api.VenueRecommendationsQueryBuilder
 import com.adyen.android.assignment.common.data.cache.model.Place
+import com.adyen.android.assignment.common.utils.Resource
 import com.adyen.android.assignment.nearbyplaces.domain.usecases.GetPlacesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,9 +19,14 @@ class PlacesViewModel @Inject constructor(
     private val getPlacesUseCase: GetPlacesUseCase
 ): ViewModel() {
 
-    private var _placesList: MutableStateFlow<List<Place>> = MutableStateFlow(emptyList())
-    private val placesList: StateFlow<List<Place>> get() = _placesList
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
 
+    private var _placesList: MutableStateFlow<Resource<List<Place>>> =
+        MutableStateFlow(Resource.Loading(emptyList()))
+    val placesList: StateFlow<Resource<List<Place>>> get() = _placesList
+
+    var pendingScrollToTopAfterRefresh = false
 
     init {
         getPlaces()
@@ -29,10 +35,11 @@ class PlacesViewModel @Inject constructor(
     fun getPlaces() = viewModelScope.launch {
         val query = VenueRecommendationsQueryBuilder()
             .setLatitudeLongitude(52.36391, 4.8939)
+            .setResponseLimit("50")
             .build()
 
         getPlacesUseCase(query).collect {
-            Log.d("ldfaf", it.toString())
+            _placesList.value = it
         }
     }
 }

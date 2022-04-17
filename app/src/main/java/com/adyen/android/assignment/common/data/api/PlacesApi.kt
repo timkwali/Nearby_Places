@@ -21,15 +21,4 @@ interface PlacesApi {
     suspend fun getVenueRecommendations(
         @QueryMap query: Map<String, String>,
     ): ResponseWrapper
-
-//    companion object  {
-//        private val retrofit by lazy {
-//            Retrofit.Builder()
-//                .baseUrl(BuildConfig.FOURSQUARE_BASE_URL)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build()
-//        }
-//
-//        val instance: PlacesApi by lazy { retrofit.create(PlacesApi::class.java) }
-//    }
 }

@@ -7,4 +7,6 @@ import kotlinx.coroutines.flow.Flow
 interface PlacesRepository {
 
     suspend fun getNearbyPlaces(query: Map<String, String>): Flow<Resource<List<Place>>>
+
+    suspend fun getPlaceById(placeId: Int): Flow<Resource<Place>>
 }

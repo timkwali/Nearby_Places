@@ -1,5 +1,6 @@
 package com.adyen.android.assignment.common.data.cache.model
 
+import android.util.Log
 import com.adyen.android.assignment.common.data.api.model.Result
 import com.adyen.android.assignment.common.utils.DomainMapper
 
@@ -14,7 +15,7 @@ class PlaceItemMapper: DomainMapper<Result, Place> {
             distance = entity.distance?.toDouble(),
             address = address,
             timeZone = entity.timezone,
-            coordinates = entity.geocode?.main,
+            coordinates = entity.geocodes?.main,
             categories = entity.categories
         )
     }

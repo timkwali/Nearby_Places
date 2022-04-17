@@ -9,5 +9,14 @@
         android:id="@+id/venuesFragment"
         android:name="com.adyen.android.assignment.nearbyplaces.presentation.PlacesFragment"
         android:label="fragment_venues"
-        tools:layout="@layout/fragment_places" />
+        tools:layout="@layout/fragment_places" >
+        <action
+            android:id="@+id/action_venuesFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="com.adyen.android.assignment.placedetails.presentation.PlaceDetailsFragment"
+        android:label="fragment_place_details"
+        tools:layout="@layout/fragment_place_details" />
 </navigation>

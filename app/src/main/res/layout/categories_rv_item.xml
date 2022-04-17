@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/cyan">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/category_siv"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_apartment_24"
+            app:shapeAppearanceOverlay="@style/round_image_white_bg"/>
+
+        <TextView
+            android:id="@+id/category_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:gravity="center"
+            android:text="category name"
+            android:fontFamily="@font/effra_std_rg"
+            android:textColor="@color/text"
+            android:textSize="16sp"
+            android:paddingHorizontal="5dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

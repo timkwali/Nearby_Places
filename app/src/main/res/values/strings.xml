@@ -2,4 +2,21 @@
     <string name="app_name">Android Assignment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="retry">Retry</string>
+    <string name="nearby_places">Nearby Places</string>
+    <string name="km_away">KM Away</string>
+    <string name="permission_not_granted">Location Permission Not Granted</string>
+    <string name="request_permission">Request location permission to use application?</string>
+    <string name="location_not_on">Location not on</string>
+    <string name="turn_on_location">Turn on location to use continue?</string>
+    <string name="search">Search</string>
+    <string name="address">Address</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="categories">Categories</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="failed_to_get_place_data">Failed to get Place data!</string>
+    <string name="name_of_place">name of place</string>
+    <string name="distance">distance</string>
+    <string name="timezone">timezone</string>
 </resources>

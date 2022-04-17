@@ -1,15 +1,22 @@
 package com.adyen.android.assignment.common.data.cache
 
 import androidx.room.TypeConverter
-import com.adyen.android.assignment.common.data.api.model.Category
-import com.adyen.android.assignment.common.data.api.model.Icon
-import com.adyen.android.assignment.common.data.api.model.Main
+import com.adyen.android.assignment.common.data.api.model.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 
 class Converters {
 
+    @TypeConverter
+    fun toGeoCode(value: String): GeoCode {
+        val listType: Type = object : TypeToken<GeoCode>() {}.type
+        return Gson().fromJson(value, listType)
+    }
+    @TypeConverter
+    fun fromGeoCode(geoCode: GeoCode): String {
+        return Gson().toJson(geoCode)
+    }
     @TypeConverter
     fun toMain(value: String): Main {
         val listType: Type = object : TypeToken<Main>() {}.type
@@ -18,6 +25,15 @@ class Converters {
     @TypeConverter
     fun fromMain(main: Main): String {
         return Gson().toJson(main)
+    }
+    @TypeConverter
+    fun toRoof(value: String): Roof {
+        val listType: Type = object : TypeToken<Roof>() {}.type
+        return Gson().fromJson(value, listType)
+    }
+    @TypeConverter
+    fun fromRoof(roof: Roof): String {
+        return Gson().toJson(roof)
     }
 
 

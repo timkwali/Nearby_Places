@@ -1,9 +1,8 @@
 package com.adyen.android.assignment.common.di
 
-import android.app.Application
-import androidx.room.Room
 import com.adyen.android.assignment.BuildConfig
 import com.adyen.android.assignment.common.data.api.PlacesApi
+import com.adyen.android.assignment.common.data.cache.PlacesDatabase
 import com.adyen.android.assignment.common.data.repository.PlacesRepositoryImpl
 import com.adyen.android.assignment.common.domain.repository.PlacesRepository
 import dagger.Module
@@ -71,7 +70,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providePlacesRepository(placesApi: PlacesApi): PlacesRepository {
-        return PlacesRepositoryImpl(placesApi)
+    fun providePlacesRepository(placesApi: PlacesApi, placesDatabase: PlacesDatabase): PlacesRepository {
+        return PlacesRepositoryImpl(placesApi, placesDatabase)
     }
 }
