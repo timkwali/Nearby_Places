@@ -26,15 +26,6 @@ class Converters {
     fun fromMain(main: Main): String {
         return Gson().toJson(main)
     }
-    @TypeConverter
-    fun toRoof(value: String): Roof {
-        val listType: Type = object : TypeToken<Roof>() {}.type
-        return Gson().fromJson(value, listType)
-    }
-    @TypeConverter
-    fun fromRoof(roof: Roof): String {
-        return Gson().toJson(roof)
-    }
 
 
     @TypeConverter
