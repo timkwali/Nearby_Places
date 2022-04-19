@@ -25,9 +25,8 @@ class PlacesViewModel @Inject constructor(
 
     fun getPlaces() = viewModelScope.launch {
         val query = VenueRecommendationsQueryBuilder()
-//            .setLatitudeLongitude(52.36391, 4.8939)
             .setLatitudeLongitude(latitude, longitude)
-            .setResponseLimit("1")
+            .setResponseLimit("50")
             .build()
 
         try {

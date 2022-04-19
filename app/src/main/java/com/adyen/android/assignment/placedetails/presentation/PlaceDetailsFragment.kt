@@ -46,10 +46,12 @@ class PlaceDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
+            if(savedInstanceState == null) {
+                placeDetailsViewModel.getPlaceById()
+            }
             backIb.setOnClickListener { findNavController().popBackStack() }
             retryBtn.setOnClickListener { placeDetailsViewModel.getPlaceById() }
             categoryRvAdapter = CategoryRvAdapter(categoriesList)
-            placeDetailsViewModel.getPlaceById()
 
             lifecycleScope.launchWhenStarted {
                 placeDetailsViewModel.place.collectLatest{

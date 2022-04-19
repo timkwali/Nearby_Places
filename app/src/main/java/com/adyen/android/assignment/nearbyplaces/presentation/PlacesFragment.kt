@@ -52,7 +52,9 @@ class PlacesFragment : Fragment(), OnItemClick<Place> {
         super.onCreate(savedInstanceState)
         locationService = LocationService(this)
         locationService.registerLocationPermission({ locationSetup() }, { permissionSetup() })
-        locationService.requestLocationPermission()
+        if(savedInstanceState == null) {
+            locationService.requestLocationPermission()
+        }
     }
 
     override fun onCreateView(
