@@ -13,7 +13,7 @@ interface PlacesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAllPlaces(places: List<Place>)
 
-    @Query("SELECT * FROM places_table WHERE id LIKE :id")
+    @Query("SELECT * FROM places_table WHERE id == :id")
     suspend fun getPlaceById(id: Int): Place
 
     @Query("SELECT * FROM places_table")

@@ -5,18 +5,13 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
-import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -33,9 +28,7 @@ import com.adyen.android.assignment.nearbyplaces.utils.LocationService
 import com.adyen.android.assignment.nearbyplaces.utils.Utils
 import com.google.android.gms.location.*
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
