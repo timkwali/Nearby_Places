@@ -8,7 +8,7 @@
     <string name="permission_not_granted">Location Permission Not Granted</string>
     <string name="request_permission">Request location permission to use application?</string>
     <string name="location_not_on">Location not on</string>
-    <string name="turn_on_location">Turn on location to use continue?</string>
+    <string name="turn_on_location">Turn on location to continue?</string>
     <string name="search">Search</string>
     <string name="address">Address</string>
     <string name="coordinates">Coordinates</string>

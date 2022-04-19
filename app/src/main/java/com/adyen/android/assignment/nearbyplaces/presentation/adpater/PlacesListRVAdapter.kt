@@ -1,11 +1,14 @@
 package com.adyen.android.assignment.nearbyplaces.presentation.adpater
 
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.adyen.android.assignment.common.data.cache.model.Place
 import com.adyen.android.assignment.common.utils.OnItemClick
 import com.adyen.android.assignment.nearbyplaces.domain.model.PlaceListItem
+import java.util.*
 
 class PlacesListRVAdapter(
     private val listener: OnItemClick<Place>

@@ -28,7 +28,6 @@ class PlaceDetailsViewModel @Inject constructor(
         _place.value = Resource.Loading()
         delay(500)
         getPlaceByIdUseCase(placeId).collect {
-            Log.d("ldfka", "viewmo  ${it.data}")
             _place.value = it
         }
     }

@@ -11,8 +11,8 @@ object Utils {
         activity: Activity,
         title: String,
         message: String,
-        tag: Int,
-        dialogHelper: DialogHelper
+        okAction: () -> Unit = {},
+        cancelAction: () -> Unit = {}
     ) {
         try {
             val builder: AlertDialog.Builder? = if (activity.parent != null) AlertDialog.Builder(activity.parent)
@@ -23,12 +23,12 @@ object Utils {
             builder?.setPositiveButton("Ok") { dialog, which ->
                 dialog.dismiss()
 //                Runtime.getRuntime().gc()
-                dialogHelper.onOkClick(tag)
+                okAction()
             }
             builder?.setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
 //                Runtime.getRuntime().gc()
-                dialogHelper.onCancelClick(tag)
+                cancelAction()
             }
             val msg = builder?.create()
             msg?.show()
