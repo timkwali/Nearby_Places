@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "fsq_id": "4a270700f964a520a58c1fe3",
+      "categories": [
+        {
+          "id": 10028,
+          "name": "Art Museum",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/museum_art_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 38,
+      "geocodes": {
+        "main": {
+          "latitude": 52.364049,
+          "longitude": 4.893104
+        },
+        "roof": {
+          "latitude": 52.364049,
+          "longitude": 4.893104
+        }
+      },
+      "location": {
+        "address": "Keizersgracht 609",
+        "country": "NL",
+        "cross_street": "Vijzelstraat",
+        "formatted_address": "Keizersgracht 609 (Vijzelstraat), 1017 DS Amsterdam",
+        "locality": "Amsterdam",
+        "neighborhood": [
+          "Grachtengordel-Zuid"
+        ],
+        "postcode": "1017 DS",
+        "region": "North Holland"
+      },
+      "name": "Foam Fotografiemuseum Amsterdam (Foam)",
+      "related_places": {},
+      "timezone": "Europe/Amsterdam"
+    }
+  ]
+}

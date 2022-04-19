@@ -1,6 +1,5 @@
 package com.adyen.android.assignment.placedetails.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.adyen.android.assignment.common.data.cache.model.Place

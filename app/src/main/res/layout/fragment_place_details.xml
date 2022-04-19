@@ -7,7 +7,8 @@
     android:paddingHorizontal="10dp"
     android:fillViewport="true"
     android:background="@color/app_bg"
-    tools:context=".placedetails.presentation.PlaceDetailsFragment">
+    tools:context=".placedetails.presentation.PlaceDetailsFragment"
+    android:id="@+id/place_details_fragment">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
