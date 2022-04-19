@@ -7,14 +7,13 @@ import com.adyen.android.assignment.R
 import com.adyen.android.assignment.common.data.cache.model.Place
 import com.adyen.android.assignment.common.utils.OnItemClick
 import com.adyen.android.assignment.databinding.PlaceRvItemBinding
-import com.adyen.android.assignment.nearbyplaces.domain.model.PlaceListItem
 
 class PlacesListViewHolder(private val binding: PlaceRvItemBinding):
     RecyclerView.ViewHolder(binding.root) {
 
     fun bind(placeListItem: Place, action: OnItemClick<Place>) {
         binding.apply {
-            placeNameTv.text = "${placeListItem.distance} ${itemView.context.getString(R.string.km_away)}"
+            placeNameTv.text = "${placeListItem.distance}${itemView.context.getString(R.string.m_away)}"
             distanceTv.text = placeListItem.name
         }
         itemView.setOnClickListener {

@@ -19,7 +19,7 @@
         tools:ignore="GoogleAppIndexingWarning" >
 
         <activity
-            android:name=".common.presentation.MainActivity"
+            android:name=".common.presentation.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".common.presentation.MainActivity"
+            android:exported="true"/>
 
     </application>
 

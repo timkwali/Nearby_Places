@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.adyen.android.assignment.R
@@ -78,7 +77,7 @@ class PlaceDetailsFragment : Fragment() {
     private fun setUpUI(place: Place) {
         binding.apply {
             placeNameTv.text = place.name
-            distanceTv.text = "${place.distance} ${getString(R.string.km_away)}"
+            distanceTv.text = "${place.distance}${getString(R.string.m_away)}"
             addressValueTv.text = place.address
             timezoneTv.text = place.timeZone
             latitudeTv.text = "${place.coordinates?.latitude} ${getString(R.string.latitude)}"
