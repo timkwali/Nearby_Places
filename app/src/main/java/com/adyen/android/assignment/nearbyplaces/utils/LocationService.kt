@@ -93,17 +93,17 @@ class LocationService(private val fragment: Fragment) {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
         fusedLocationClient.requestLocationUpdates(
             locationRequest,
-            locationCallback,
+            locationCallback { action() },
             Looper.myLooper()!!
         )
-        action()
     }
 
-    private val locationCallback: LocationCallback = object : LocationCallback() {
+    private fun locationCallback(action: () -> Unit = {}): LocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
             val lastLocation = locationResult.lastLocation
             latitude = lastLocation.latitude
             longitude = lastLocation.longitude
+            action()
         }
     }
 }
