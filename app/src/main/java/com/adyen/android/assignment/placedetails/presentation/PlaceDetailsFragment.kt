@@ -78,7 +78,9 @@ class PlaceDetailsFragment : Fragment() {
         binding.apply {
             placeNameTv.text = place.name
             distanceTv.text = "${place.distance}${getString(R.string.m_away)}"
-            addressValueTv.text = place.address
+            if(place.address?.isEmpty() == true) {
+                addressValueTv.isVisible = false
+            } else addressValueTv.text = place.address
             timezoneTv.text = place.timeZone
             latitudeTv.text = "${place.coordinates?.latitude} ${getString(R.string.latitude)}"
             longitudeTv.text = "${place.coordinates?.longitude} ${getString(R.string.longitude)}"
