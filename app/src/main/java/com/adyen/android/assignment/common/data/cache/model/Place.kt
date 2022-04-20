@@ -11,7 +11,7 @@ data class Place(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String?,
-    val distance: Double?,
+    val distance: Int?,
     val address: String?,
     val timeZone: String?,
     val coordinates: Main?,
