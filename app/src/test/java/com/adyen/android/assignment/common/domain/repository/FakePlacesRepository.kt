@@ -14,8 +14,8 @@ class FakePlacesRepository: PlacesRepository {
         val testIcon = Icon("test_prefix", "test_suffix")
         val testCategories = listOf(Category(testIcon, "0", "test_icon_name"))
         val testPlacesList = listOf(
-            Place(1, "test_name1", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
-            Place(2, "test_name2", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(1, "test_name1", 5, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(2, "test_name2", 5, "test_address", "test_timezone", testCoordinates, testCategories),
         )
         return flowOf(Resource.Success(testPlacesList))
     }
@@ -24,7 +24,7 @@ class FakePlacesRepository: PlacesRepository {
         val testCoordinates = Main(0.0, 0.0)
         val testIcon = Icon("test_prefix", "test_suffix")
         val testCategories = listOf(Category(testIcon, "0", "test_icon_name"))
-        val place = Place(1, "test_name1", 5.0, "test_address", "test_timezone", testCoordinates, testCategories)
+        val place = Place(1, "test_name1", 5, "test_address", "test_timezone", testCoordinates, testCategories)
         return flowOf(Resource.Success(place))
     }
 }

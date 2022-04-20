@@ -36,6 +36,7 @@ class PlaceDetailsViewModelTest {
     private lateinit var getPlaceByIdUseCase: GetPlaceByIdUseCase
     private lateinit var placesRepository: PlacesRepository
 
+    @ExperimentalCoroutinesApi
     @Before
     fun setUp() {
         placesRepository = FakePlacesRepository()

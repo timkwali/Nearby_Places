@@ -45,8 +45,8 @@ class PlacesDaoTest {
         val testIcon = Icon("test_prefix", "test_suffix")
         val testCategories = listOf(Category(testIcon, "0", "test_icon_name"))
         val testPlacesList = listOf(
-            Place(1, "test_name1", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
-            Place(2, "test_name2", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(1, "test_name1", 5, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(2, "test_name2", 5, "test_address", "test_timezone", testCoordinates, testCategories),
         )
 
         placesDao.insertAllPlaces(testPlacesList)
@@ -63,8 +63,8 @@ class PlacesDaoTest {
         val testIcon = Icon("test_prefix", "test_suffix")
         val testCategories = listOf(Category(testIcon, "0", "test_icon_name"))
         val testPlacesList = listOf(
-            Place(1, "test_name1", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
-            Place(2, "test_name2", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(1, "test_name1", 5, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(2, "test_name2", 5, "test_address", "test_timezone", testCoordinates, testCategories),
         )
 
         placesDao.insertAllPlaces(testPlacesList)
@@ -81,8 +81,8 @@ class PlacesDaoTest {
         val testIcon = Icon("test_prefix", "test_suffix")
         val testCategories = listOf(Category(testIcon, "0", "test_icon_name"))
         val testPlacesList = listOf(
-            Place(1, "test_name1", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
-            Place(2, "test_name2", 5.0, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(1, "test_name1", 5, "test_address", "test_timezone", testCoordinates, testCategories),
+            Place(2, "test_name2", 5, "test_address", "test_timezone", testCoordinates, testCategories),
         )
 
         placesDao.insertAllPlaces(testPlacesList)
